@@ -8,7 +8,7 @@ int Control(int altitude) {
   else if (altitude > 0)
     thruster = 1;
   else
-    thruster = 0; // YOUR CODE HERE
+    thruster = 0;
 
   return thruster;
 }
@@ -18,7 +18,7 @@ void Test(int altitude) {
   int behaviorCorrect = (altitude > 100 && thruster == 0) ||
                         (altitude <= 100 && altitude > 0 && thruster == 1) ||
                         (altitude <= 0 && thruster == 0);
-  char *behaviorCorrectIcon = behaviorCorrect ? "y" : "no";
+  char *behaviorCorrectIcon = behaviorCorrect ? "yes" : "no";
   printf("For altitude %3d, your thruster is %d |%s|\n", altitude, thruster,
          behaviorCorrectIcon);
 }
